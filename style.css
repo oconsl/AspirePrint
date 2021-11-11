@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: consolas, "Courier New";
+    background-color: lightgray;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    padding: 0.5%;
+}
+
+nav a:visited, nav a:link{
+    color: black;
+    text-decoration-style: none;
+}
+
+nav > ul > li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+main {
+    display: block;
+    background-image: url("images/background/bg_6.jpg");
+    background-size: cover;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+footer {
+    padding: 0.5%;
+}
+
+aside, article {
+    padding: 2em;
+}
+
+aside {
+    text-align: center;
+}
+
+article {
+    width: 75%;
+}
+
+@media only screen and (min-width: 768px){
+    main {
+        display: flex;
+    }
+
+    aside {
+        margin-left: 2%;
+    }
+}
