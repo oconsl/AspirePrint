@@ -1,0 +1,78 @@
+
+
+article > p > a:visited,
+article > p > a:link {
+    text-decoration: none;
+    color: rgb(14, 235, 255);
+}
+
+main > div,
+article {
+    padding: 2em;
+}
+
+main > div {
+    width: 20%;
+    padding: 0;
+    position: relative;
+}
+
+article {
+    width: 80%;
+    position: relative;
+}
+
+.sideBox {
+    width: 15vw;
+}
+
+.logoBox {
+    height: 15vw;
+    width: 15vw;
+    position: relative;    
+    border: solid 0.7em rgb(34, 103, 133);
+    border-radius: 5%;
+    border-start-end-radius: 50% 80%;
+    border-end-start-radius: 50% 80%;
+    background: linear-gradient(
+        180deg,
+        rgba(204, 234, 244, 1) 0%,
+        rgba(37, 133, 153, 1) 51%,
+        rgba(54, 107, 238, 1) 100%
+    );
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 170%;
+    margin-right:-40% ;    
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.subtitle {
+    position: absolute;
+    background-color: black;
+    font-size: 1.5em;
+    padding: 0.5em;
+    border: solid 0.1em white;
+    margin-top: 0.2em;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.banner {
+    width: 0100%;
+}

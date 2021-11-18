@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aspire Print</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/pattern.css" />
+    <link rel="stylesheet" href="css/order.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="store.html">Tienda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <img class="logo" src="images/logo/aspire_logo_clean.png" alt="Print Store" />
+        </div>
+        <article>
+            <div class="order-selected">
+                <div class="imgBox">
+                    <img class="extrusor_ender3" src="" alt="Extrusor Ender 3" />
+                </div>
+                <div class="contentBox">
+                    <h3 class="title"></h3>
+                    <h2 class="price"></h2>
+                </div>
+            </div>
+            <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+                <div class="input-group">
+                    <div>
+                        <label for="first-name">Nombre</label>
+                    </div>
+                    <div>
+                        <input type="text" name="first-name" id="first-name" required placeholder="Nombre" />
+                    </div>
+                    <div>
+                        <label for="last-name">Apellido</label>
+                    </div>
+                    <div>
+                        <input type="text" name="last-name" id="last-name" required placeholder="Apellido" />
+                    </div>
+                    <div>
+                        <label for="address">Direccion</label>
+                    </div>
+                    <div>
+                        <input type="text" name="address" id="address" required placeholder="Direccion" />
+                    </div>
+                    <div>
+                        <label for="floor">Depto/Piso</label>
+                    </div>
+                    <div>
+                        <input type="text" name="floor" id="floor" placeholder="Depto/Piso" />
+                    </div>
+                    <div>
+                        <label for="country">País</label>
+                    </div>
+                    <div>
+                        <input type="text" name="country" id="country" required placeholder="País" />
+                    </div>
+                    <div>
+                        <label for="city">Ciudad/Provincia</label>
+                    </div>
+                    <div>
+                        <input type="text" name="city" id="city" required placeholder="Ciudad/Provincia" />
+                    </div>
+                    <div>
+                        <label for="email">e-mail</label>
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" required placeholder="e-mail">
+                    </div>
+                    <div>
+                        <label for="phone-number">Teléfono</label>
+                    </div>
+                    <div>
+                        <input type="tel" name="phone-number" id="phone-number" 
+                        placeholder="Teléfono" required pattern="[0-9]{3}-[0-9]{7}">
+                    </div>
+                    <small>Formato: 111-2334455</small>
+                    <div>
+                        <label for="item">Artículo</label>
+                    </div>
+                    <div>
+                        <input type="text" name="item" id="item" value="" readonly size=30>
+                    </div>
+                </div>
+                <input type="reset" value="Limpiar" />
+                <input type="submit" value="Pedir" />
+            </form>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="store.html">Tienda</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const order = localStorage.getItem("order");
+        if (order) {
+            const storeOrder = JSON.parse(order);
+            document.getElementById("item").setAttribute("value", storeOrder.title + ", " + storeOrder.price);
+            const orderSelected = document.querySelector(".contentBox");
+            orderSelected.querySelector(".title").innerText =
+                storeOrder.title;
+            orderSelected.querySelector(".price").innerText =
+                storeOrder.price;
+            const orderImg = document.querySelector(".imgBox");
+            const img = orderImg.querySelector("img");
+            console.log(img);
+            img.setAttribute("src", `images/product/${storeOrder.id}.webp`);
+        }
+    });
+</script>
+
+</html>
