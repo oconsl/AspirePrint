@@ -6,17 +6,17 @@ body {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    background-color: rgb(15, 47, 61);
 }
 
 header {
-    display: block;
+    /*display: block;*/
     position: fixed;
-    top: 0;
-    left: 0;
+    /* top: 0; */
+    /*left: 0;*/
     width: 100%;
     background-color: rgb(15, 47, 61);
-    padding: 0.5%;
+    /* padding: 0.5%; */
+    z-index: 100;
 }
 
 main {
@@ -34,9 +34,13 @@ nav a:link {
     color: white;
 }
 
+ul {
+    display:flex;
+}
+
 nav > ul > li {
-    display: inline-block;
     list-style: none;
+    font-weight: bold;
     margin: 0 5px 0 5px;
 }
 
