@@ -1,0 +1,91 @@
+main {
+    display: flex;
+    height: 85%
+}
+
+/*----------------- FAQ ---------------*/
+/*#region*/
+.faq-section {
+    flex: 1;
+    position: relative;
+}
+
+.faq-container {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    left: -5%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #191919;
+    border-top: groove 0.5em cyan;
+    border-bottom: groove 0.5em cyan;
+    border-left: groove 0.5em yellow;
+    border-right: groove 0.5em magenta;
+    border-radius: 20px;
+}
+
+.faq-title h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    text-transform: uppercase;
+}
+
+hr.solid {
+    border-top: 3px groove cyan;
+}
+
+.question {
+    font-size: 1.5em;
+    padding-left: 1em;
+    margin-top: 2em;
+    color: magenta;
+    text-transform: uppercase;
+}
+
+.answer {
+    font-size: 1.2em;
+    text-justify: center;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+/*#endregion*/
+
+/*---------------- MAIL ----------------*/
+/*#region*/
+.mail-title {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 1px 0 0 #000, 0 -2px 0 #000, 0 1px 0 #000, -2px 0 0 #000;
+    text-align: center;
+    margin-top: 2.3em;
+    margin-left: 2em;
+}
+
+article p {
+    font-size: 1.5em;
+    text-justify: center;
+    margin-left: 4em;
+}
+
+article > a:visited,
+article a:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(14, 235, 255);
+}
+
+article img {
+    border-top: groove 0.5em cyan;
+    border-bottom: groove 0.5em cyan;
+    border-left: groove 0.5em yellow;
+    border-right: groove 0.5em magenta;
+    border-radius: 20px;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+/*#endregion*/

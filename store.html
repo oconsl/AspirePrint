@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
     <title>Aspire Print</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/pattern.css">
     <link rel="stylesheet" href="css/store.css">
 </head>
+<script src="scripts/store.js"></script>
 <body>
-    <script src="script.js"></script>
     <header>
-        <nav class="menu">
+        <div class="logo-box">
+            <img class="logo" src="images/logo/aspire_drop.png" alt="Print Store">
+        </div>
+        <nav class="nav-menu">
             <div class="menu-left">
                 <div class="menu-title">ASPIRE PRINT</div>
             </div>
@@ -27,96 +30,102 @@
         </nav>
     </header>
     <main>
-        <div>
-            <img class="logo" src="images/logo/aspire_logo_clean.png" alt="Print Store">
+        <div class="side-box">
+            <div>
+                <ul>
+                    <li card-change="set1">impresoras</li>
+                    <li card-change="set2">pla</li>
+                    <li card-change="set3">petg</li>
+                    <li card-change="set4">repuestos</li>
+                </ul>
+            </div>
         </div>
         <article>
             <h1>PRODUCTOS</h1>
-            <section class="columns-desktop">
+            <section class="cards-container">
                 <div class="card">
-                    <div class="imgBox">
-                        <img class="ender3" src="images/product/impresora_ender3.webp" alt="Ender 3">
+                    <div class="box-img">
+                        <img class="product-img" src="images/product/impresora_ender3.png" alt="Impresora Ender 3">
                     </div>                  
-                    <div class="contentBox">
+                    <div class="box-container">
                         <h3>Impresora Ender 3</h3>
                         <h2 class="price">$ 45.541</h2>
                         <a data-order="impresora_ender3" href="#" class="buy">Comprar</a>
                     </div>                  
                 </div>
                 <div class="card">
-                    <div class="imgBox">
-                        <img class="extrusor_ender3" src="images/product/extrusor_ender3.webp" alt="Extrusor Ender 3">
+                    <div class="box-img">
+                        <img class="product-img" src="images/product/impresora_resina.png" alt="Impresora Resina">
                     </div>                  
-                    <div class="contentBox">
-                        <h3>Extrusor Ender 3</h3>
-                        <h2 class="price">$ 1.759</h2>
-                        <a data-order="extrusor_ender3" href="#" class="buy">Comprar</a>
-                    </div>                  
-                </div>
-                <div class="card">
-                    <div class="imgBox">
-                        <img class="pla_blanco" src="images/product/pla_blanco.webp" alt="Pla blanco">
-                    </div>                  
-                    <div class="contentBox">
-                        <h3>PLA Blanco</h3>
-                        <h2 class="price">$ 2.499</h2>
-                        <a data-order="pla_blanco" href="#" class="buy">Comprar</a>
+                    <div class="box-container">
+                        <h3>Impresora de Resina</h3>
+                        <h2 class="price">$ 43.299</h2>
+                        <a data-order="impresora_resina" href="#" class="buy">Comprar</a>
                     </div>                  
                 </div>
                 <div class="card">
-                    <div class="imgBox">
-                        <img class="curadora_resina" src="images/product/curadora_resina.webp" alt="Curadora Resina">
+                    <div class="box-img">
+                        <img class="product-img" src="images/product/curadora_resina.png" alt="Curadora Resina">
                     </div>                  
-                    <div class="contentBox">
+                    <div class="box-container">
                         <h3>Curadora Resina</h3>
-                        <h2 class="price">$ 43.249</h2>
+                        <h2 class="price">$ 30.199</h2>
                         <a data-order="curadora_resina" href="#" class="buy">Comprar</a>
                     </div>                  
                 </div>
-                <!-- <div class="element">
-                    <img class="image-print" src="images/product/impresora_ender3.webp" alt="Ender 3">
-                    <div class="element-information">
-                        <div class="title">Impresora Cartesiana Ender 3</div>
-                        <div class="price">$45.541</div>
-                    </div>
-                    <p>
-                        Impresora armada, lista para su uso.
-                    </p>
-                    <button>Comprar.</button>
+                <div class="card">
+                    <div class="box-img">
+                        <img class="product-img" src="images/product/impresora_curadora_resina.png" alt="Impresora Curadora Resina">
+                    </div>                  
+                    <div class="box-container">
+                        <h3>Impresora + Curadora Resina</h3>
+                        <h2 class="price">$ 68.799</h2>
+                        <a data-order="impresora_curadora_resina" href="#" class="buy">Comprar</a>
+                    </div>                  
                 </div>
-                <div class="element">
-                    <img class="image-pla-yellow" src="images/product/pla_amarillo_f.webp" alt="PLA amarillo">
-                    <div class="element-information">
-                        <div class="title">PLA Amarillo Flúor 1kg</div>
-                        <div class="price">$2.499</div>
-                    </div>
-                    <p>
-                        Material para impresión a base de algodón.
-                    </p>
-                    <button>Comprar.</button>
-                </div>
-                <div class="element">
-                    <img class="image-extrusor" src="images/product/extrusor_ender3.webp" alt="extrusor Ender 3">
-                    <div class="element-information">
-                        <div class="title">Extrusor Impresora Ender 3</div>
-                        <div class="price">$1.759</div>
-                    </div>
-                    <p>
-                        Repuestos extrusor pre-armado.
-                    </p>
-                    <button>Comprar.</button>
-                </div> -->
             </section>
         </article>
+        <div class="bubble-container">
+            <ul id="menu">
+                <a class="menu-button" href="#menu" title="Abrir"><span>
+                    <img class="plus-img" src="images/menu/plus-solid.svg" alt="">
+                </span></a>
+                <a class="menu-button" href="#menu-inverse" title="Cerrar"><span>
+                    <img class="plus-img" src="images/menu/plus-solid.svg" alt="">
+                </span></a>
+                <li class="menu-item">
+                    <a href="https://github.com/oconsl">
+                        <img class="github-img" src="images/menu/github-brands.svg" alt="">
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://www.instagram.com/globallearning.ar/?hl=es">
+                        <img class="instagram-img" src="images/menu/instagram-brands.svg" alt="">
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://goo.gl/maps/WgzWCb9A2as9cCrQ7">
+                        <img class="map-img" src="images/menu/map-marker-alt-solid.svg" alt="">
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="https://web.whatsapp.com/">
+                        <img class="whatsapp-img" src="images/menu/whatsapp-brands.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="store.html">Tienda</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </footer>       
+        <div class="footer-left">
+            “ La creatividad es la inteligencia divirtiéndose. ”
+        </div>
+        <div class="footer-right">
+            <div class="footer-container">
+                <div><span>©</span> Aspire Print</div>
+                <a href="contact.html">FAQ</a>
+            </div>
+        </div>
+    </footer>      
 </body>
 </html>
